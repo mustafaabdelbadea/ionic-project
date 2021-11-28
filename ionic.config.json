@@ -1,0 +1,7 @@
+{
+  "name": "bawq-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
