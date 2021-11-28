@@ -10,7 +10,7 @@ import { GraphqlService } from '../services/graphql-service/graphql.service';
 export class Tab1Page {
   @ViewChild('map', { static: false }) googleMap!: ElementRef;
   public map: google.maps.Map;
-
+  public marker: google.maps.Marker;
   constructor(private _graphql: GraphqlService) {}
 
   ngOnInit() {
@@ -34,7 +34,7 @@ export class Tab1Page {
       mapOptions
     );
 
-    const marker = new google.maps.Marker({
+     this.marker = new google.maps.Marker({
       position: coords,
       map: this.map,
     });
@@ -45,4 +45,13 @@ export class Tab1Page {
       console.log(data);
     });
   }
+
+  removeMarkers(){
+    this.marker.setVisible(false)
+  }
+  
+  showMarker(){
+    this.marker.setVisible(true)
+  }
+  
 }

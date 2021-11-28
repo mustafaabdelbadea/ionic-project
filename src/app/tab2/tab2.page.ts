@@ -15,7 +15,6 @@ import { GraphqlService } from '../services/graphql-service/graphql.service';
 })
 export class Tab2Page {
   public signInCtrl!: FormGroup;
-
   constructor(private _graphql: GraphqlService, private fb: FormBuilder) {}
 
   ngOnInit() {
@@ -26,6 +25,7 @@ export class Tab2Page {
   }
 
   submit() {
+    
     this._graphql.userSignInMutation(this.signInCtrl.value).subscribe(
       (data) => {
         console.log(data);

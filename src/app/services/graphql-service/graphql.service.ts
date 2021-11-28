@@ -20,8 +20,8 @@ export class GraphqlService {
     const variables = {
       inputs,
     };
-    return this.apollo.query({
-      query: signInMutation,
+    return this.apollo.mutate({
+      mutation: signInMutation,
       variables,
     });
   }
