@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>tab4</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content
+  [scrollEvents]="true"
+  (ionScrollStart)="logScrollStart()"
+  (ionScroll)="logScrolling($event)"
+  (ionScrollEnd)="logScrollEnd()">
+    <h1>Main Content</h1>
+    <ion-item-divider >
+      <ion-label type="md">
+        Section B
+      </ion-label>
+    </ion-item-divider>
+
+    <ion-button (click)="presentToast()">Toast</ion-button>
+    <ion-spinner name="crescent"  > </ion-spinner>
+
+    <ion-grid>
+      <ion-row class="ion-align-items-center">
+        <ion-col size="6" size-md>
+          ion-col
+        </ion-col>
+        <ion-col>
+          ion-col
+        </ion-col>
+        <ion-col>
+          ion-col
+        </ion-col>
+        <ion-col>
+          ion-col
+        </ion-col>
+        <ion-col>
+          ion-col
+        </ion-col>
+        <ion-col>
+          ion-col
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <!-- <div slot="fixed">
+      <h1>Fixed Content</h1>
+    </div> -->
+</ion-content>

@@ -27,7 +27,9 @@ export class Tab2Page {
   submit() {
     
     this._graphql.userSignInMutation(this.signInCtrl.value).subscribe(
-      (data) => {
+      ({data }:any) => {
+        localStorage.setItem("token", data.userSignIn.token);
+
         console.log(data);
       },
       (error) => {
@@ -35,4 +37,14 @@ export class Tab2Page {
       }
     );
   }
+
+
+  get idnetifierCtrl() {
+    return this.signInCtrl.get('identifier') as FormControl;
+  }
+
+  get passwordCtrl() {
+    return this.signInCtrl.get('password') as FormControl;
+  }
+
 }
