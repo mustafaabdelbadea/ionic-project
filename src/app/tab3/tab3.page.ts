@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
 
@@ -9,7 +9,8 @@ import { AlertController } from '@ionic/angular';
 })
 export class Tab3Page {
 
-  constructor(public alertController: AlertController) {}
+  constructor(public alertController: AlertController,
+    private renderer: Renderer2) {}
   // openMenu() {
   //    MenuController.open();
   // }
@@ -108,6 +109,17 @@ export class Tab3Page {
 
     const { role } = await alert.onDidDismiss();
     console.log('onDidDismiss resolved with role', role);
+  }
+  
+  onToggleColorTheme(event){
+    console.log(event);
+    if(event.detail.checked){
+      this.renderer.setAttribute(document.body ,'color-theme','dark' ) 
+       }else{
+        this.renderer.setAttribute(document.body ,'color-theme','light' ) 
+
+    }
+    
   }
 
 }

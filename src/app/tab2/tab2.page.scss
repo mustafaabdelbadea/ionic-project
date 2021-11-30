@@ -3,20 +3,20 @@ section:not(.full-width),
   padding: 0 20px;
 }
 
-.img-container {
-  padding-bottom: 50px;
-  text-align: center;
-}
 
 .inputs-container {
   padding-top: 30px;
   padding-bottom: 20px;
 }
 
-section {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+// section {
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   top: 50%;
+//   transform: translateY(-50%);
+// }
+
+ion-grid{
+  min-height: 100%;
 }

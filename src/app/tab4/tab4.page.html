@@ -1,10 +1,10 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>tab4</ion-title>
+    <ion-title>Settings</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content
+<!-- <ion-content
   [scrollEvents]="true"
   (ionScrollStart)="logScrollStart()"
   (ionScroll)="logScrolling($event)"
@@ -17,7 +17,7 @@
     </ion-item-divider>
 
     <ion-button (click)="presentToast()">Toast</ion-button>
-    <ion-spinner name="crescent"  > </ion-spinner>
+    <ion-spinner name="crescent" spinner="dots"  animated="false"> </ion-spinner>
 
     <ion-grid>
       <ion-row class="ion-align-items-center">
@@ -41,8 +41,53 @@
         </ion-col>
       </ion-row>
     </ion-grid>
+    <ion-content>
+      <swiper>
+        <ng-template swiperSlide >Slide 1</ng-template>
+        <ng-template swiperSlide>Slide 3</ng-template>
+        <ng-template swiperSlide>Slide 3</ng-template>
+      </swiper>
+    </ion-content>
+</ion-content> -->
 
-    <!-- <div slot="fixed">
-      <h1>Fixed Content</h1>
-    </div> -->
+
+
+<ion-content>
+  <ion-grid>
+
+    <ion-item class="avatar" lines="none">
+      <ion-avatar slot="start">
+        <img src="https://th.bing.com/th/id/R.03f159f4a7f45a725da8901336c8bcbf?rik=LuSuBQEoOkrZgA&pid=ImgRaw&r=0">
+      </ion-avatar>
+      <ion-label>
+        <h3>
+          <b>
+            Mustafa Abdelbadea
+          </b>
+        </h3>
+        <p>
+          Client Admin</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item detail routerLink="/edit-name" class="ion-margin-vertical">
+      <ion-label>
+        Name
+      </ion-label>
+    </ion-item>
+    <ion-item detail routerLink="/change-password" class="ion-margin-vertical">
+      <ion-label>
+        Change Password
+      </ion-label>
+    </ion-item>
+
+    <ion-item class="ion-margin-vertical">
+      <ion-label>
+        Toggle Color Theme
+      </ion-label>
+      <ion-toggle (ionChange)="onToggleColorTheme($event)">
+
+      </ion-toggle>
+    </ion-item>
+  </ion-grid>
 </ion-content>

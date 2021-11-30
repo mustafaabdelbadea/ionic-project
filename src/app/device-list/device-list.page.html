@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>deviceList</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar></ion-searchbar>
+
+  <ion-segment value="all" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="all">
+      <ion-row>
+        <ion-col>
+          <ion-icon name="ellipse"></ion-icon>
+
+        </ion-col>
+        <ion-col>
+          <ion-label>
+            All (30)
+          </ion-label>
+        </ion-col>
+      </ion-row>
+
+    </ion-segment-button>
+    <ion-segment-button value="online">
+      <ion-row>
+        <ion-col>
+          <ion-icon name="ellipse" class="online-icon"></ion-icon>
+
+        </ion-col>
+        <ion-col>
+          <ion-label>
+            Online (20)
+          </ion-label>
+        </ion-col>
+      </ion-row>
+
+    </ion-segment-button>
+    <ion-segment-button value="offline">
+      <ion-row>
+        <ion-col>
+          <ion-icon name="ellipse" class="offline-icon"></ion-icon>
+
+        </ion-col>
+        <ion-col>
+          <ion-label>
+            Offline (10)
+          </ion-label>
+        </ion-col>
+      </ion-row>
+
+    </ion-segment-button>
+  </ion-segment>
+</ion-content>

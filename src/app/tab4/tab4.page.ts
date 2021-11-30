@@ -1,14 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2, ViewEncapsulation } from '@angular/core';
 import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab4',
   templateUrl: './tab4.page.html',
   styleUrls: ['./tab4.page.scss'],
+  encapsulation: ViewEncapsulation.None
+
 })
 export class Tab4Page implements OnInit {
+  rootPage: any;
 
-  constructor(public toastController: ToastController) { }
+  constructor(public toastController: ToastController,
+    private renderer:Renderer2) { }
 
 
   async presentToast() {
@@ -19,7 +23,15 @@ export class Tab4Page implements OnInit {
     toast.present();
   }
 
+  onToggleColorTheme(event){
+    console.log(event);
+    if(event.detail.checked){
+      this.renderer.setAttribute(document.body ,'color-theme','dark' ) 
+       }else{
+        this.renderer.setAttribute(document.body ,'color-theme','light' ) 
 
+    }
+  }
 
   ngOnInit() {
   }
