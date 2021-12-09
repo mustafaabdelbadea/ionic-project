@@ -343,5 +343,13 @@
       </ion-card-content>
 
     </ion-card>
+
+    <ion-item>
+      <ion-label>D MMM YYYY H:mm</ion-label>
+      <ion-datetime displayFormat="D MMM YYYY H:mm" (ionCahnge)="dateChanged()" value="2005-06-17T11:06Z">
+      </ion-datetime>
+      <ion-button expand="block" (click)="openPicker()">Show Single Column Picker</ion-button>
+
+    </ion-item>
   </ion-grid>
 </ion-content>

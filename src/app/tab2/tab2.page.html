@@ -24,8 +24,8 @@
                 <ion-label position="floating">Email</ion-label>
                 <ion-input formControlName="identifier" type="email" color="primary"></ion-input>
               </ion-item>
-              <p>{{
-                idnetifierCtrl.errors?.API }}</p>
+              <small color="danger">
+                idnetifierCtrl.errors?.API </small>
               <p *ngIf="idnetifierCtrl?.errors?.API" class="danger" padding>{{
                 idnetifierCtrl.errors?.API }}</p>
             </ion-col>

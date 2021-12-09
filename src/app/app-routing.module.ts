@@ -21,6 +21,14 @@ const routes: Routes = [
   {
     path: 'users-list',
     loadChildren: () => import('./users-list/users-list.module').then( m => m.UsersListPageModule)
+  },
+  {
+    path: 'commands-modal',
+    loadChildren: () => import('./commands-modal/commands-modal.module').then( m => m.CommandsModalPageModule)
+  },
+  {
+    path: 'device-provision',
+    loadChildren: () => import('./device-provision/device-provision.module').then( m => m.DeviceProvisionPageModule)
   }
 ];
 @NgModule({
