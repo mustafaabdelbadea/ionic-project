@@ -6,7 +6,7 @@ workflows:
       - name: Set Android SDK location
         script: echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/android/local.properties"      
       - name: Update dependencies and copy web assets to native project
-        script: npm run android --prod
+        script: ionic capacitor build android --prod
       - name: Build Android debug
         script: cd android ./gradlew assembleDebug    
 
